@@ -1,9 +1,10 @@
 {
   "name": "oir-test-new",
-
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && node scripts/build-index.mjs",
+    "start": "next start -p ${PORT:-3000}",
     "lint": "next lint"
+  }
+}
