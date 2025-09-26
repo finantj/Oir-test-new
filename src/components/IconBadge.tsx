@@ -1,8 +1,8 @@
-"use client";
-import type { ComponentType } from "react";
-import { BookOpen, MapPin, Star, User } from "lucide-react";
+use client;
+import type { LucideIcon } from "lucide-react";
+import { BookOpen, User, MapPin, Star } from "lucide-react";
 
-const ICONS: Record<string, ComponentType<{ size?: number }>> = {
+const ICONS: Record<string, LucideIcon> = {
   BookOpen,
   User,
   MapPin,
