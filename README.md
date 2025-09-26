@@ -1,7 +1,6 @@
 # Oir Project
 
 
-
 ## Getting started
 
 1. Install dependencies:
@@ -21,6 +20,7 @@
 - `npm run build` – build the production application.
 - `npm run start` – run the built application.
 - `npm run lint` – lint the codebase with ESLint.
+
 
 ## UI toolkit
 
