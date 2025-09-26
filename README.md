@@ -1,6 +1,6 @@
 # Oir Project
 
-This repository contains the Next.js front-end for the Oir Project, a digital humanities knowledge-graph environment for medieval Irish history. The application provides search, visualization, and exploration interfaces for interconnected datasets such as annals, fiants, bardic poetry, places, and people.
+
 
 ## Getting started
 
@@ -8,6 +8,7 @@ This repository contains the Next.js front-end for the Oir Project, a digital hu
    ```bash
    npm install
    ```
+
 2. Start the development server:
    ```bash
    npm run dev
