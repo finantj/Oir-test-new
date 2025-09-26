@@ -1,5 +1,6 @@
 {
   "name": "oir-test-new",
+  "description": "Next.js front-end for the Oir Project knowledge graph portal.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -45,6 +46,10 @@
   "overrides": {
     "glob": "^10.4.5",
     "rimraf": "^5.0.9"
+  },
+  "engines": {
+    "node": ">=18.18",
+    "npm": ">=10.0.0"
   },
   "packageManager": "npm@10.9.0"
 }
