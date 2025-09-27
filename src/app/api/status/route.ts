@@ -7,6 +7,8 @@ export async function GET() {
     const raw = await fs.readFile(p, "utf8");
     return new Response(raw, { headers: { "content-type": "application/json" } });
   } catch {
-    return new Response(JSON.stringify({ steps: [] }), { headers: { "content-type": "application/json" } });
+    return new Response(JSON.stringify({ steps: [] }), {
+      headers: { "content-type": "application/json" }
+    });
   }
 }

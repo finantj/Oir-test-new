@@ -1,13 +1,26 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 type Step = { label: string; time?: string };
 
 export default function Home() {
   const [steps, setSteps] = useState<Step[]>([]);
+  const [err, setErr] = useState<string | null>(null);
+
   useEffect(() => {
-    fetch("/api/status").then(r => r.json()).then(d => setSteps(d.steps ?? [])).catch(()=>{});
+    (async () => {
+      try {
+        const r = await fetch("/api/status");
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const d = await r.json();
+        setSteps(d.steps ?? []);
+      } catch (e: any) {
+        setErr(e?.message || String(e));
+      }
+    })();
   }, []);
+
   const last = steps[steps.length - 1];
   const chips = ['Annals','Fiants','Bardic Poetry','DIB','CIRCLE','Logainm'];
 
@@ -17,14 +30,26 @@ export default function Home() {
         <h1 className="text-5xl font-semibold tracking-wide text-gold drop-shadow">Oir Project</h1>
         <p className="mt-2 opacity-90">Linking Ireland’s Past, One Record at a Time</p>
         {last && (
-          <div className="mt-4 mx-auto max-w-xl rounded-lg border"
-               style={{background:"#123c22", borderColor:"#1ea453", color:"#b8f7cf", fontWeight:600, padding:"10px 12px"}}>
+          <div
+            className="mt-4 mx-auto max-w-xl rounded-lg border"
+            style={{ background: "#123c22", borderColor: "#1ea453", color: "#b8f7cf", fontWeight: 600, padding: "10px 12px" }}
+          >
             ✅ {last.label} {last.time ? `— ${new Date(last.time).toLocaleString()}` : ""}
           </div>
         )}
+        {!last && err && (
+          <div
+            className="mt-4 mx-auto max-w-xl rounded-lg border"
+            style={{ background: "#3c1212", borderColor: "#a41e1e", color: "#f7b8b8", fontWeight: 600, padding: "10px 12px" }}
+          >
+            ⚠️ Status error: {err}
+          </div>
+        )}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
-          {chips.map(k => (
-            <span key={k} className="px-3 py-2 rounded-full bg-black/25 border border-gold">{k}</span>
+          {chips.map((label) => (
+            <span key={label} className="px-3 py-2 rounded-full bg-black/25 border border-gold">
+              {label}
+            </span>
           ))}
         </div>
       </header>
@@ -34,9 +59,7 @@ export default function Home() {
           placeholder="Search across centuries of Irish history…"
           className="w-full h-12 px-3 text-lg bg-black/20 border border-gold rounded placeholder:opacity-60"
         />
-        <div className="mt-4 text-sm opacity-80">
-          Search & JSON-LD inspector will appear here next.
-        </div>
+        <div className="mt-4 text-sm opacity-80">Search & JSON-LD inspector coming next.</div>
       </section>
     </main>
   );

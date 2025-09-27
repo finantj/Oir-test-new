@@ -17,5 +17,6 @@ body {
     linear-gradient(to bottom, var(--oir-brown-700), var(--oir-brown-500));
   color: var(--oir-cream);
 }
+
 .border-gold { border-color:#d4b36b; }
 .text-gold { color: var(--oir-gold-300); }
