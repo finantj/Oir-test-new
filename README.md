@@ -22,6 +22,19 @@
 - `npm run lint` – lint the codebase with ESLint.
 
 
+## Deployment
+
+Deployments are expected to build from the `main` branch. If you need to trigger a fresh production build without code changes, run:
+
+```bash
+git checkout main
+git commit --allow-empty -m "trigger production build from Git"
+git push origin main
+```
+
+The Vercel project should also be configured to run `npm run build`, which executes the `postbuild` script to regenerate the MiniSearch index before serving the app.
+
+
 ## UI toolkit
 
 The project uses [shadcn/ui](https://ui.shadcn.com) components configured for the Oir visual language alongside Tailwind CSS and TypeScript.
