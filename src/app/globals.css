@@ -1,1 +1,21 @@
-html,body{background:#111;color:#eee}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --oir-brown-700:#5a3a1e;
+  --oir-brown-500:#875d32;
+  --oir-gold-300:#e6d299;
+  --oir-cream:#f3ead7;
+}
+
+body {
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.12), transparent 60%),
+    linear-gradient(to bottom, var(--oir-brown-700), var(--oir-brown-500));
+  color: var(--oir-cream);
+}
+.border-gold { border-color:#d4b36b; }
+.text-gold { color: var(--oir-gold-300); }

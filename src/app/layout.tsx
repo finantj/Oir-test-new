@@ -1,5 +1,14 @@
 import './globals.css';
-export const metadata = { title: 'Oir Project', description: 'Baseline' };
+
+export const metadata = {
+  title: 'Oir Project',
+  description: 'Linking Ireland’s Past, One Record at a Time'
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body style={{margin:0}}>{children}</body></html>;
+  return (
+    <html lang="en">
+      <body className="min-h-screen">{children}</body>
+    </html>
+  );
 }
