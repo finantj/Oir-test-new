@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/build-index.mjs",
     "start": "next start -p ${PORT:-3000}",
     "lint": "next lint"
   },
