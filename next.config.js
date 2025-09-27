@@ -1,6 +1,3 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'standalone',
-  experimental: { typedRoutes: false },
-};
+const nextConfig = { output: 'standalone' };
 module.exports = nextConfig;
