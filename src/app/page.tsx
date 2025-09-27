@@ -6,11 +6,18 @@ type Step = { label: string; time?: string };
 
 export default function Home() {
   const [steps, setSteps] = useState<Step[]>([]);
+  const [statusError, setStatusError] = useState<string | null>(null);
   useEffect(() => {
-    fetch("/api/status")
-      .then((r) => r.json())
-      .then((d) => setSteps(d.steps ?? []))
-      .catch(() => {});
+    (async () => {
+      try {
+        const r = await fetch("/api/status");
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const d = await r.json();
+        setSteps(d.steps ?? []);
+      } catch (e: any) {
+        setStatusError(e?.message || String(e));
+      }
+    })();
   }, []);
   const last = steps[steps.length - 1];
 
@@ -24,6 +31,12 @@ export default function Home() {
           <div className="mt-4 mx-auto max-w-xl rounded-lg border"
                style={{background:"#123c22", borderColor:"#1ea453", color:"#b8f7cf", fontWeight:600, padding:"10px 12px"}}>
             ✅ {last.label} {last.time ? `— ${new Date(last.time).toLocaleString()}` : ""}
+          </div>
+        )}
+        {!last && statusError && (
+          <div className="mt-4 mx-auto max-w-xl rounded-lg border"
+               style={{background:"#3c1212", borderColor:"#a41e1e", color:"#f7b8b8", fontWeight:600, padding:"10px 12px"}}>
+            ⚠️ Status error: {statusError}. Try reloading or confirm <code>/api/status</code> exists in this deployment.
           </div>
         )}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
