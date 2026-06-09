@@ -1,11 +1,11 @@
 import { listItems } from '@/lib/store';
+import { liveData } from '@/lib/liveData';
 import BrowseGallery from '@/components/BrowseGallery';
-
-export const dynamic = 'force-dynamic';
 
 export const metadata = { title: 'Browse · Oir Artifact Repository' };
 
 export default function BrowsePage() {
+  liveData();
   const items = listItems();
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">

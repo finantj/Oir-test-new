@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { getAllVocabularies, listExhibits, listItems } from '@/lib/store';
+import { isStaticBuild, liveData } from '@/lib/liveData';
 import ItemCard from '@/components/ItemCard';
 
-export const dynamic = 'force-dynamic';
-
 export default function Home() {
+  liveData();
   const items = listItems();
   const exhibits = listExhibits();
   const vocabs = getAllVocabularies();
@@ -79,9 +79,11 @@ export default function Home() {
             <p className="mt-2 text-sm text-stone-500">
               Import JSON-LD records or create items by hand in the admin area.
             </p>
-            <Link href="/admin/import" className="btn-primary mt-4">
-              Import JSON-LD
-            </Link>
+            {!isStaticBuild && (
+              <Link href="/admin/import" className="btn-primary mt-4">
+                Import JSON-LD
+              </Link>
+            )}
           </div>
         </section>
       )}

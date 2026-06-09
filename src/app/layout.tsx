@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { collectionJsonLdHref, isStaticBuild } from '@/lib/liveData';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -34,12 +35,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/admin"
-                className="ml-2 rounded-md border border-amber-300/40 px-3 py-1.5 text-amber-200 hover:bg-amber-200/10"
-              >
-                Admin
-              </Link>
+              {!isStaticBuild && (
+                <Link
+                  href="/admin"
+                  className="ml-2 rounded-md border border-amber-300/40 px-3 py-1.5 text-amber-200 hover:bg-amber-200/10"
+                >
+                  Admin
+                </Link>
+              )}
             </nav>
           </div>
         </header>
@@ -49,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p>
               Oir Artifact Repository — artifact records are stored and served as JSON-LD, using
               Dublin Core Terms, CIDOC CRM, and Schema.org.{' '}
-              <a href="/api/export" className="text-emerald-800 underline">
+              <a href={collectionJsonLdHref()} className="text-emerald-800 underline">
                 Download the full collection
               </a>
               .

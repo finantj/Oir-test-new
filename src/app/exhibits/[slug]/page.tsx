@@ -1,11 +1,18 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getExhibit, getItem } from '@/lib/store';
+import { getExhibit, getItem, listExhibits } from '@/lib/store';
+import { liveData } from '@/lib/liveData';
 import ItemCard from '@/components/ItemCard';
 
-export const dynamic = 'force-dynamic';
+export function generateStaticParams() {
+  // Pre-render every exhibit only for the static export; the server build
+  // renders on demand so edits show up immediately.
+  if (process.env.NEXT_PUBLIC_OIR_STATIC !== '1') return [];
+  return listExhibits().map((exhibit) => ({ slug: exhibit.slug }));
+}
 
 export default function ExhibitPage({ params }: { params: { slug: string } }) {
+  liveData();
   const exhibit = getExhibit(params.slug);
   if (!exhibit) notFound();
 

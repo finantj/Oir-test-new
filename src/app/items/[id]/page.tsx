@@ -1,15 +1,22 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllVocabularies, getItem } from '@/lib/store';
+import { getAllVocabularies, getItem, listItems } from '@/lib/store';
 import { itemToJsonLd } from '@/lib/jsonld';
 import { itemIdentifier, itemTitle } from '@/lib/itemUtils';
+import { itemJsonLdHref, liveData } from '@/lib/liveData';
 import { termLabel } from '@/lib/vocabularies';
 import MetadataTable from '@/components/MetadataTable';
 import ItemThumb from '@/components/ItemThumb';
 
-export const dynamic = 'force-dynamic';
+export function generateStaticParams() {
+  // Pre-render every item only for the static export; the server build renders
+  // on demand so edits show up immediately.
+  if (process.env.NEXT_PUBLIC_OIR_STATIC !== '1') return [];
+  return listItems().map((item) => ({ id: item.id }));
+}
 
 export default function ItemPage({ params }: { params: { id: string } }) {
+  liveData();
   const item = getItem(params.id);
   if (!item) notFound();
   const vocabs = getAllVocabularies();
@@ -46,7 +53,7 @@ export default function ItemPage({ params }: { params: { id: string } }) {
           {item.media[0]?.caption && (
             <p className="text-xs text-stone-500">{item.media[0].caption}</p>
           )}
-          <a href={`/api/items/${item.id}/jsonld`} className="btn-secondary w-full justify-center">
+          <a href={itemJsonLdHref(item.id)} className="btn-secondary w-full justify-center">
             Download JSON-LD
           </a>
         </div>

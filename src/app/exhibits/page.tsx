@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { getItem, listExhibits } from '@/lib/store';
+import { liveData } from '@/lib/liveData';
 import ItemThumb from '@/components/ItemThumb';
-
-export const dynamic = 'force-dynamic';
 
 export const metadata = { title: 'Exhibits · Oir Artifact Repository' };
 
 export default function ExhibitsPage() {
+  liveData();
   const exhibits = listExhibits();
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">

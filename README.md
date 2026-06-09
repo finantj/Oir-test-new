@@ -64,11 +64,31 @@ exhibit, *Dress & Ornament at Ráth Glas*. Delete the files under `data/` to sta
 3. Open [http://localhost:3000](http://localhost:3000) — and
    [http://localhost:3000/admin](http://localhost:3000/admin) for the admin area.
 
+## Publishing to shared hosting (no Node server required)
+
+The public site can be exported as plain static HTML and uploaded to any ordinary
+web host (e.g. a cPanel/shared-hosting account such as Reclaim Hosting). The workflow:
+
+1. Edit the collection locally: `npm run dev`, then use `/admin` to import JSON-LD,
+   edit items, and build exhibits. Everything is saved to the `data/` folder.
+2. Build the static site:
+   ```bash
+   npm run build:static
+   ```
+3. Upload the **contents** of `out/` (including the generated `.htaccess`) to your
+   web root (`public_html/`), via cPanel File Manager, FTP, or git.
+
+The static site keeps browse search/facets (they run in the browser), all item and
+exhibit pages, and JSON-LD downloads (under `/downloads/`, including
+`collection.jsonld`). The admin area is omitted — editing happens locally, and you
+re-export and re-upload to publish changes. Since `data/` is just files, the whole
+collection can live in git alongside the code.
+
 ## Scripts
 
-- `npm run dev` – start the development server.
-- `npm run build` – build the production application.
-- `npm run start` – run the built application.
+- `npm run dev` – development server with the live admin (edit mode).
+- `npm run build` / `npm run start` – build and run the full Node server (live admin).
+- `npm run build:static` – export the public site as static HTML into `out/`.
 - `npm run lint` – lint the codebase with ESLint.
 
 ## Stack
