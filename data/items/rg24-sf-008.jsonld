@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "oir": "https://oir.gaelicireland.org/ns/"
+  },
+  "@id": "https://oir.gaelicireland.org/id/artifact/rg24-sf-008",
+  "@type": ["crm:E22_Human-Made_Object", "dcterms:PhysicalObject"],
+  "dcterms:identifier": "RG24-SF-008",
+  "dcterms:title": "Decorated copper-alloy strap-end",
+  "dcterms:description": "Cast copper-alloy strap-end with a split butt secured by two rivets and a zoomorphic terminal. The central field carries interlace ornament in low relief with traces of tinning. A fine piece of personal equipment, probably from a belt or satchel strap.",
+  "dcterms:type": "Strap-end",
+  "dcterms:medium": "Copper alloy",
+  "dcterms:spatial": "Trench 3, Context C040 (house floor)",
+  "dcterms:temporal": "Early medieval (9th–10th century AD)",
+  "dcterms:provenance": "Recovered during the 2024 excavation season at Ráth Glas ringfort (sample dataset); excavation licence 24E0107.",
+  "crm:P2_has_type": "Strap-end (zoomorphic)",
+  "crm:P45_consists_of": "Copper alloy, tinned",
+  "crm:P43_has_dimension": "Length 47 mm; width 16 mm; weight 7.1 g",
+  "crm:P53_has_former_or_current_location": "Trench 3, Context C040 (house floor)",
+  "crm:P3_has_note": "Interlace closely paralleled in 9th–10th-century Irish metalwork. Conserved 2024.",
+  "oir:recordCreated": "2026-06-09T12:00:00.000Z",
+  "oir:recordModified": "2026-06-09T12:00:00.000Z",
+  "oir:featured": true
+}

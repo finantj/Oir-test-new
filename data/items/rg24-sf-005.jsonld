@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "oir": "https://oir.gaelicireland.org/ns/"
+  },
+  "@id": "https://oir.gaelicireland.org/id/artifact/rg24-sf-005",
+  "@type": ["crm:E22_Human-Made_Object", "dcterms:PhysicalObject"],
+  "dcterms:identifier": "RG24-SF-005",
+  "dcterms:title": "Souterrain ware rim sherd",
+  "dcterms:description": "Rim sherd of a flat-bottomed, bucket-shaped vessel in coarse, grass-marked fabric. The everted rim shows sooting on the exterior, indicating use as a cooking vessel.",
+  "dcterms:type": "Pottery vessel",
+  "dcterms:medium": "Ceramic",
+  "dcterms:spatial": "Trench 2, Context C033 (souterrain fill)",
+  "dcterms:temporal": "Early medieval (8th–12th century AD)",
+  "dcterms:provenance": "Recovered during the 2024 excavation season at Ráth Glas ringfort (sample dataset); excavation licence 24E0107.",
+  "crm:P2_has_type": "Souterrain ware",
+  "crm:P45_consists_of": "Coarse earthenware, organic-tempered",
+  "crm:P43_has_dimension": "Sherd 71 × 54 mm; estimated rim diameter 220 mm",
+  "crm:P53_has_former_or_current_location": "Trench 2, Context C033 (souterrain fill)",
+  "crm:P3_has_note": "Grass-marking on the base interior surface; exterior sooting consistent with hearth use.",
+  "oir:recordCreated": "2026-06-09T12:00:00.000Z",
+  "oir:recordModified": "2026-06-09T12:00:00.000Z"
+}

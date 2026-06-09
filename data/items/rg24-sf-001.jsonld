@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "oir": "https://oir.gaelicireland.org/ns/"
+  },
+  "@id": "https://oir.gaelicireland.org/id/artifact/rg24-sf-001",
+  "@type": ["crm:E22_Human-Made_Object", "dcterms:PhysicalObject"],
+  "dcterms:identifier": "RG24-SF-001",
+  "dcterms:title": "Copper-alloy ringed pin",
+  "dcterms:description": "Complete polyhedral-headed ringed pin with a plain ring. The pin shaft is slightly bent towards the tip and carries faint traces of incised ornament below the head. Ringed pins of this form were the everyday cloak fastener of early medieval Ireland and the wider Norse world.",
+  "dcterms:type": "Dress pin",
+  "dcterms:medium": "Copper alloy",
+  "dcterms:spatial": "Trench 1, Context C014 (occupation layer)",
+  "dcterms:temporal": "Early medieval (10th–11th century AD)",
+  "dcterms:provenance": "Recovered during the 2024 excavation season at Ráth Glas ringfort (sample dataset); excavation licence 24E0107.",
+  "crm:P2_has_type": "Ringed pin (polyhedral-headed)",
+  "crm:P45_consists_of": "Copper alloy",
+  "crm:P43_has_dimension": "Length 112 mm; ring diameter 21 mm; weight 9.4 g",
+  "crm:P53_has_former_or_current_location": "Trench 1, Context C014 (occupation layer)",
+  "crm:P3_has_note": "X-radiography shows the ring was cast separately and inserted through a perforated head. Conserved 2024; stable.",
+  "oir:recordCreated": "2026-06-09T12:00:00.000Z",
+  "oir:recordModified": "2026-06-09T12:00:00.000Z",
+  "oir:featured": true
+}

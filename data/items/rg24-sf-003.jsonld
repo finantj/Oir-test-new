@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "oir": "https://oir.gaelicireland.org/ns/"
+  },
+  "@id": "https://oir.gaelicireland.org/id/artifact/rg24-sf-003",
+  "@type": ["crm:E22_Human-Made_Object", "dcterms:PhysicalObject"],
+  "dcterms:identifier": "RG24-SF-003",
+  "dcterms:title": "Composite bone comb fragment",
+  "dcterms:description": "Fragment of a double-sided composite comb comprising one connecting plate and three tooth plates, fastened with iron rivets. The connecting plate is decorated with ring-and-dot motifs between marginal lines. Most teeth are broken at the base.",
+  "dcterms:type": "Comb",
+  "dcterms:medium": "Bone and antler",
+  "dcterms:spatial": "Trench 1, Context C014 (occupation layer)",
+  "dcterms:temporal": "Early medieval (9th–11th century AD)",
+  "dcterms:provenance": "Recovered during the 2024 excavation season at Ráth Glas ringfort (sample dataset); excavation licence 24E0107.",
+  "crm:P2_has_type": "Composite double-sided comb",
+  "crm:P45_consists_of": "Antler (plates), iron (rivets)",
+  "crm:P43_has_dimension": "Surviving length 64 mm; height 38 mm",
+  "crm:P53_has_former_or_current_location": "Trench 1, Context C014 (occupation layer)",
+  "crm:P3_has_note": "Ring-and-dot decoration applied with a centre-bit. Tooth wear indicates extended use before discard.",
+  "oir:recordCreated": "2026-06-09T12:00:00.000Z",
+  "oir:recordModified": "2026-06-09T12:00:00.000Z",
+  "oir:featured": true
+}

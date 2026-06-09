@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "dress-and-ornament",
+    "title": "Dress & Ornament at Ráth Glas",
+    "summary": "What the small finds from the ringfort tell us about how its inhabitants dressed, fastened their cloaks, and carried their belongings in the early medieval period.",
+    "blocks": [
+      {
+        "heading": "Fastening the cloak",
+        "text": "The woollen cloak (brat) was the outer garment of early medieval Ireland, and it was fastened at the shoulder with a pin. The ringed pin from the occupation layer in Trench 1 is the classic everyday fastener of the 10th and 11th centuries: cheap to cast, easy to lose, and found in their hundreds from Dublin to Iceland.",
+        "itemIds": [
+          "rg24-sf-001"
+        ]
+      },
+      {
+        "heading": "Personal adornment",
+        "text": "Smaller items of adornment travelled far along the same routes as the people who wore them. The cobalt-blue glass bead from the souterrain fill and the tinned strap-end with its interlace ornament both speak to a household with access to fine goods, whether by trade, gift, or patronage.",
+        "itemIds": [
+          "rg24-sf-002",
+          "rg24-sf-008"
+        ]
+      },
+      {
+        "heading": "Grooming",
+        "text": "Composite combs are among the most personal objects to survive from the period. The decorated comb fragment from Trench 1 was used long enough for its teeth to wear before it was discarded — a small, intimate trace of daily life inside the ringfort.",
+        "itemIds": [
+          "rg24-sf-003"
+        ]
+      }
+    ],
+    "createdAt": "2026-06-09T12:00:00.000Z",
+    "updatedAt": "2026-06-09T12:00:00.000Z"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "oir": "https://oir.gaelicireland.org/ns/"
+  },
+  "@id": "https://oir.gaelicireland.org/id/artifact/rg24-sf-007",
+  "@type": ["crm:E22_Human-Made_Object", "dcterms:PhysicalObject"],
+  "dcterms:identifier": "RG24-SF-007",
+  "dcterms:title": "Perforated whetstone",
+  "dcterms:description": "Elongated whetstone of fine-grained siltstone, rectangular in section, with a biconical suspension hole at one end. All four faces show smoothing from sharpening; one face carries deep point-sharpening grooves.",
+  "dcterms:type": "Whetstone",
+  "dcterms:medium": "Stone",
+  "dcterms:spatial": "Trench 1, Context C021 (hearth spread)",
+  "dcterms:temporal": "Early medieval (8th–11th century AD)",
+  "dcterms:provenance": "Recovered during the 2024 excavation season at Ráth Glas ringfort (sample dataset); excavation licence 24E0107.",
+  "crm:P2_has_type": "Pendant whetstone",
+  "crm:P45_consists_of": "Siltstone, fine-grained",
+  "crm:P43_has_dimension": "Length 94 mm; section 14 × 11 mm",
+  "crm:P53_has_former_or_current_location": "Trench 1, Context C021 (hearth spread)",
+  "oir:recordCreated": "2026-06-09T12:00:00.000Z",
+  "oir:recordModified": "2026-06-09T12:00:00.000Z"
+}

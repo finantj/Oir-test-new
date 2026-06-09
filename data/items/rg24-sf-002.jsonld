@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "oir": "https://oir.gaelicireland.org/ns/"
+  },
+  "@id": "https://oir.gaelicireland.org/id/artifact/rg24-sf-002",
+  "@type": ["crm:E22_Human-Made_Object", "dcterms:PhysicalObject"],
+  "dcterms:identifier": "RG24-SF-002",
+  "dcterms:title": "Blue glass bead",
+  "dcterms:description": "Small annular bead of translucent cobalt-blue glass with a slightly asymmetric perforation. Glass beads of this kind circulated widely in early medieval Ireland and are common finds on high-status settlement sites.",
+  "dcterms:type": "Bead",
+  "dcterms:medium": "Glass",
+  "dcterms:spatial": "Trench 2, Context C033 (souterrain fill)",
+  "dcterms:temporal": "Early medieval (8th–10th century AD)",
+  "dcterms:provenance": "Recovered by wet-sieving of souterrain fill C033 (sample dataset); excavation licence 24E0107.",
+  "crm:P2_has_type": "Annular bead",
+  "crm:P45_consists_of": "Glass (cobalt-blue, translucent)",
+  "crm:P43_has_dimension": "Diameter 8.2 mm; perforation 2.9 mm; weight 0.6 g",
+  "crm:P53_has_former_or_current_location": "Trench 2, Context C033 (souterrain fill)",
+  "oir:recordCreated": "2026-06-09T12:00:00.000Z",
+  "oir:recordModified": "2026-06-09T12:00:00.000Z",
+  "oir:featured": true
+}
